@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NonRepeated Character</title>
+</head>
+<body>
+----Program to find First Non repeated Character----
+<br>
+<br>
+"Enter the text"
+<br>
+<input type="text" id="myfirst_text">
+<br>
+<button type="button" onclick="document.write(findNotRepeated());">find</button>
+
+<script type="text/javascript">
+
+function findNotRepeated() { 
+var string_value = document.getElementById('myfirst_text').value;
+let lst =new Set(string_value.split(''));
+let count =0, rslt='';
+
+
+for (item of lst) {
+for (var i = 0; i < string_value.length; i++) {
+if (item === string_value[i]) {
+count++;
+}
+if (count === 2) {
+count=0;
+break;
+}
+}
+if (count===1) {
+rslt=item;
+break;
+}
+}
+return rslt
+}
+</script>
+</body>
+</html>

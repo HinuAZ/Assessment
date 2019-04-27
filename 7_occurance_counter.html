@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>counting the occurrence of a substring in a string</title>
+</head>
+<body>
+---- Program to Count the Occurances----
+<br>
+<br>
+"Enter the String"
+<br>
+<input type="text" id="myfirst_string">
+<br>
+"Enter the Element to find the Occurances"
+<br>
+<input type="text" id="find_string">
+<button type="button" onclick="document.write(fn_counting());">count</button>
+<script type="text/javascript">
+function fn_counting() 
+    {
+var main_str = document.getElementById('myfirst_string').value;
+var sub_str = document.getElementById('find_string').value;
+
+
+    if (sub_str.length <= 0) 
+    {
+        return main_str.length + 1;
+    }
+
+       subStr = sub_str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+       return (main_str.match(new RegExp(subStr, 'gi')) || []).length;
+    }
+
+
+</script>
+</body>
+</html>

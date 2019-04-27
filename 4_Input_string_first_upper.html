@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	---- Program to get Input String from user and convert first character of the string to uppercase----
+<br>
+<br>
+	<input type = "text" id = "str" placeholder="Enter Your String"><br>
+	<input type = "submit" onclick="upper();">
+	<h1 id = "displayResult" style="color: red;"></h1>
+
+	<script type="text/javascript">
+		function upper() 
+		{
+			var str = document.getElementById('str').value;
+			var arr = str.split(' ');
+			console.log(arr);
+			
+			for (var i = 0; i < arr.length; i++) {
+				
+				arr[i]= arr[i].charAt(0).toUpperCase()+arr[i].substring(1);
+				
+			}
+
+			document.write(arr);
+		}
+
+  </script>
+</body>
+</html>
