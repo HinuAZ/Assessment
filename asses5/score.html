@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program in JS which takes marks of 3 subjects from user at runtime and then prints whether a student is passing</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a = parseInt(prompt('Enter marks of subject 1'));
+	var b = parseInt(prompt('Enter marks of subject 2'));
+	var c = parseInt(prompt('Enter marks of subject 3'));
+	var flag=0;
+	var total=a+b+c;
+	if (a>=40) 
+	{
+		flag=1;
+	}
+	if(b>=40)
+	{
+		flag=1;
+	}
+	if(c>=40)
+	{
+		flag=1;
+	}
+	if(total>=125)
+	{
+		flag=1;
+	}
+	console.log("total: "+total);
+	if (flag==1) 
+	{
+		console.log("PASS");
+	}
+	else
+	{
+		console.log("FAIL");
+	}
+</script>
+</body>
+</html>
