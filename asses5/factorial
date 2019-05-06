@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var readline = require("readline");
+var valFromRuntime = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+valFromRuntime.question('Enter any number', function (answer) {
+    var n = parseInt(answer);
+    var f = 1;
+    for (var i = 1; i <= n; i++) {
+        f = f * i;
+    }
+    console.log("Factorial of " + n + " is " + f);
+    valFromRuntime.close();
+});
