@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>highlight disabled</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+   <input type="text" name="name" disabled="true" class='disabled'>
+   
+
+<script type="text/javascript">
+     $(document).ready(function(){
+        $('#disable').click(function(){
+
+            $.each($('.disabled'),function(index,val){
+            
+                document.write(index);
+                if($(this).prop('disabled'))
+                {
+                    $(this).css('background-color','lime');
+                }
+            });
+        });
+    });
+                
+</script>    
+   
+            
+    </script>
+</head>
+<body>
+    <button id="clickElement">Click Here</button>
+    <button id="disable">Disable Click</button>
+</body>
+</html>

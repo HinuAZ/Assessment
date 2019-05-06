@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extract first column value</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	SS
+<table id = "table1" border="1px solid black;">
+	<tr>
+		<td>UserID</td>
+		<td>Password</td>
+		</tr>
+	
+		<tr><td>Hima</td>
+		<td>hima22</td></tr>
+	
+		<tr><td>MAnni</td>
+		<td>Mann88</td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+  $(document).ready(function($) {
+    
+ 
+  var arr = [];
+$("#table1 tr").each(function(){
+    arr.push($(this).find("td:first").text());
+});
+for (i=0;i<arr.length;i++)
+{
+document.write(arr[i] + "<br >");
+}
+ });
+</script>
+
+
+
+</table>
+</body>
+</html>
