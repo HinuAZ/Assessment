@@ -1,0 +1,15 @@
+class Traffic
+{
+	public static void main(String[] args) {
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		System.out.println("Enter one of the choices 1.Red \n2.Yellow \n3.Green");
+		int color = sc.nextInt();
+		switch(color)
+		{
+			case 1: System.out.println("STOP"); break;
+			case 2: System.out.println("READY"); break;
+			case 3: System.out.println("GO"); break;
+			default: System.out.println("Enter appropriate choice");break;
+		}
+	}
+}
