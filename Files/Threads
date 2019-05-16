@@ -1,0 +1,52 @@
+import java.io.*;
+
+class Threads
+{
+	public static void main(String[] args) 
+	{
+		File source = new File("C:/Users/HennaAzeez/Desktop/output.txt");
+		File dest = new File("C:/Users/HennaAzeez/Desktop/output2.txt");
+		CopyThread cd = new CopyThread(source,dest);
+		cd.start();
+	}
+}
+
+class CopyThread extends Thread
+{
+	File source,dest;
+	CopyThread(File source, File dest)
+	{
+		this.source = source;
+		this.dest = dest;
+	}
+
+	public void run()
+	{
+		try{
+			
+			String contents ="";
+			int numberofChars = 0; 
+			int value = 0;
+			FileInputStream fileIn = new FileInputStream(source);
+            while((value = fileIn.read())!=-1)
+            {
+            	contents = contents + (char)value;
+                ++numberofChars;
+                if(numberofChars == 10)
+                {
+                	System.out.println("10 characters are copied");
+                	numberofChars = 0;
+                	Thread.sleep(3000);
+                }
+            }
+
+            BufferedWriter bw = new BufferedWriter(new FileWriter(dest));
+    		bw.write(contents);
+    		bw.flush();
+			bw.close(); 
+		}catch(Exception ioe)
+		{
+			System.out.println("Exception caught: "+ioe);
+		}
+	}
+}
