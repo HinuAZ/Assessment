@@ -1,0 +1,37 @@
+import java.util.*;
+ 
+public class GetSquare {
+ 
+  public static void main(String[] args)
+   {
+    
+    ArrayList<Integer> list = new ArrayList<>();
+      
+      
+      list.add(6); list.add(559);list.add(172);
+     
+      System.out.print("List: ");
+      System.out.println(list);
+      HashMap<Integer, Integer> map = method(list);
+   
+      Iterator<Integer> itr = map.keySet().iterator();
+      System.out.println("Output :");
+      while(itr.hasNext())
+      {
+        Integer key = itr.next();
+
+      System.out.println(key + " : " + map.get(key));
+    
+      }
+  
+    }
+
+      public static HashMap method(List<Integer> array) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+     
+        for (int n: array) {
+          map.put( n, n*n);
+        }
+        return map;
+      }
+}
