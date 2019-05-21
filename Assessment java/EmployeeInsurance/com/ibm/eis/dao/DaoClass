@@ -13,10 +13,7 @@ public class DaoClass implements DaoInterface {
 		nn.put(em.getId(), em);
 		
 	}
-//	public DaoClass()
-//	  {  
-//	nn.put(1,new Employee(1,"Nitin","Developer",3000));
-//	 }
+
 	public Map<Integer,Employee>displayName(){
 		return nn;
 		
