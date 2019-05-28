@@ -1,0 +1,61 @@
+package com.ibm.banking.testt;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
+import org.junit.jupiter.api.condition.EnabledOnJre;
+import org.junit.jupiter.api.condition.EnabledOnOs;
+import org.junit.jupiter.api.condition.JRE;
+import org.junit.jupiter.api.condition.OS;
+
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.ibm.banking.ui.Main;
+
+import org.junit.jupiter.api.Disabled;
+
+
+class test1{
+Main obj;
+	@Test
+	
+	void test() {
+		fail("Not yet implemented");
+	}
+	
+	@BeforeEach
+	void welcome() {
+	System.out.println("This is a welcome message, for the customer.");
+	}
+	
+	@AfterEach
+	void welcome1() {
+	System.out.println("This is a Thank-you message, for the customer.");
+	}
+
+
+	@RepeatedTest(3)
+	void testRepeat(RepetitionInfo info) {
+		
+		System.out.println("Currennt loop is : " + info.getCurrentRepetition());
+		System.out.println("Total number of loops are : " + info.getTotalRepetitions());
+		fail("Not yet implemented");
+	}
+
+
+	
+	
+}
